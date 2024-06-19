@@ -1,0 +1,111 @@
+:root {
+  --default-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+body {
+  font-family: var(--default-font-family);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  background: url('../assets/images/5e24f06c-9ef1-469f-867a-4405870a90b9.png') no-repeat center;
+  background-size: cover;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.frame, .label-search {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+button.frame {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+button.frame:hover {
+  transform: scale(1.1);
+}
+
+.label-search {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.suggestions {
+  margin-top: 10px;
+  width: calc(100% - 20px);
+  max-width: 600px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #858585;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.suggestion-item button {
+  margin-left: auto;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.suggestion-item button:hover {
+  background-color: #7ba4cf;
+}
+
+.home-button, .discovery-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #9915d6a2;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.home-button:hover, .discovery-button:hover {
+  background-color: #a420cc9a;
+}

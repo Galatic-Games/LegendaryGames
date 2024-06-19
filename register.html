@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Legendary Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.discordapp.com/attachments/1188974807350509640/1250926397220720660/360_F_417440234_w6uhv93WE60EYsYy.png?ex=666cb77e&is=666b65fe&hm=bb6bb5706cb03f76e7e301050b23b4c5256506ae800836036710968a76b8aaaf&');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #e74c3c; /* Cor da borda vermelha */
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .register-form input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+            font-size: 16px;
+        }
+        .register-form button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .register-form button:hover {
+            background-color: #202020;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form class="register-form" onsubmit="registerUser(event)">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para registrar um novo usuário
+        function registerUser(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Verifica se o usuário já existe no localStorage
+            if (localStorage.getItem(username)) {
+                alert('Username already exists. Please choose a different username.');
+                return;
+            }
+
+            // Salva os dados do novo usuário no localStorage
+            localStorage.setItem(username, JSON.stringify({ password: password }));
+
+            alert('Registration successful! You can now login.');
+            window.location.href = 'login.html'; // Redireciona para a página de login
+        }
+    </script>
+</body>
+</html>

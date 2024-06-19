@@ -1,0 +1,136 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Legendary Games</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-image: url('https://cdn.discordapp.com/attachments/1188974807350509640/1250926397220720660/360_F_417440234_w6uhv93WE60EYsYy.png?ex=666cb77e&is=666b65fe&hm=bb6bb5706cb03f76e7e301050b23b4c5256506ae800836036710968a76b8aaaf&');
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    flex-direction: column;
+                }
+                .navbar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: rgba(51, 51, 51, 0.8);
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    width: 90%;
+                    max-width: 1200px;
+                    margin-bottom: 20px;
+                }
+                .navbar a, .navbar button {
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 15px;
+                    font-size: 18px;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+                .navbar button {
+                    background-color: #6c757d; /* Cinza para os botões */
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s;
+                }
+                .navbar button:hover {
+                    background-color: #5a6268; /* Tom mais escuro de cinza ao passar o mouse */
+                }
+                .navbar img {
+                    max-height: 50px;
+                }
+                .games-section {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 90%;
+                    max-width: 1200px;
+                    text-align: center;
+                }
+                .games-section img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .play-button {
+                    display: inline-block;
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    background-color: #6c757d; /* Cinza para os botões */
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s;
+                    cursor: pointer;
+                    border: none;
+                }
+                .play-button:hover {
+                    background-color: #5a6268; /* Tom mais escuro de cinza ao passar o mouse */
+                }
+                .account-info {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    font-size: 18px;
+                }
+                .account-info span {
+                    background-color: #6c757d; /* Cor de fundo dos botões */
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-left: 10px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="navbar">
+                <div>
+                    <a href="home.html">Home</a>
+                    <a href="discovery.html">Discovery</a>
+                    <button onclick="window.location.href='index.html'">Center</button>
+                </div>
+                <div class="account-info">
+                    Usuário: <span id="loggedInUser"></span>
+                    <img src="https://cdn.discordapp.com/attachments/1175494981524394014/1250866806252507166/Legendary_GAMES-removebg-preview.png?ex=666c7ffe&is=666b2e7e&hm=3cf382c0a5e030bfc5f7bf5a6a9c6127bb3ece22fb995a73b719c15195bb38d4" alt="Logo">
+                </div>
+            </div>
+        
+            <div class="games-section" id="gamesSection">
+                <iframe src="https://scratch.mit.edu/projects/478784072/embed" allowtransparency="true" width="80%" height="550" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <h2>ARENA 3.02 (unfinished series)</h2>
+                <p>Better Performance- the-chaotic.itch.io/arena
+                    Official Trailer - youtu.be/TZb2YMNVIAA
+                    
+                    The ultimate arena game! Fight your friends or the AI for dominance, who will be the first to master the arena? Features fast paced combat and platforming, a variety of weapons, polished graphics, easy to use interface.. and more!
+                    
+                    Controls in options menu (use the tabs at the top). Can be changed to whatever you want!
+                    Click an option to change it</p>
+                <button onclick="window.location.href='index.html'" class="play-button">Center/home</button>
+            </div>
+        
+            <script>
+                // Simulação de usuário logado
+                var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+                var username = localStorage.getItem('username');
+        
+                // Mostrar informações da conta do usuário se estiver logado
+                if (isLoggedIn && username) {
+                    document.getElementById('loggedInUser').textContent = username;
+                } else {
+                    document.getElementById('loggedInUser').textContent = 'Você não está logado.';
+                }
+            </script>
+        </body>
+        </html>
+        

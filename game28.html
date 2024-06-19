@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Games</title>
+    <style>
+        :root {
+            --primary-color: #2882e9;
+            --secondary-color: #232323;
+            --background-color: #f0f0f0;
+            --background-image: url('https://cdn.discordapp.com/attachments/1188974807350509640/1250926397220720660/360_F_417440234_w6uhv93WE60EYsYy.png?ex=666cb77e&is=666b65fe&hm=bb6bb5706cb03f76e7e301050b23b4c5256506ae800836036710968a76b8aaaf&');
+            --navbar-bg: rgba(0, 0, 0, 0.5);
+            --games-section-bg: #ffffff;
+            --game-bg: #f7f7f7;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: var(--background-image);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--navbar-bg);
+            padding: 10px 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+        .navbar a, .navbar button {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .navbar button {
+            background-color: #6c757d;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar button:hover {
+            background-color: #5a6268;
+        }
+        .navbar img {
+            max-height: 50px;
+        }
+        .games-section {
+            background-color: var(--games-section-bg);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+        }
+        .games-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .play-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .play-button:hover {
+            background-color: #5a6268;
+        }
+        .account-info {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
+        .account-info span {
+            background-color: #6c757d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .game-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .game-info span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .game-info img {
+            cursor: pointer;
+            margin-left: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .like-dislike {
+            display: flex;
+            align-items: center;
+        }
+        .like-dislike button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .like-dislike button img {
+            width: 30px;
+            height: 30px;
+        }
+        .fullscreen-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .fullscreen-button img {
+            width: 30px;
+            height: 30px;
+        }
+        .report-button {
+            background-color: #dc3545;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .report-button:hover {
+            background-color: #c82333;
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            border: 2px solid;
+        }
+        .like-notification {
+            border-color: blue;
+        }
+        .dislike-notification {
+            border-color: red;
+        }
+        .like-dislike input {
+            margin-left: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <a href="home.html">Home</a>
+            <a href="discovery.html">Discovery</a>
+            <button onclick="window.location.href='index.html'">Center</button>
+        </div>
+        <div class="account-info">
+            Usuário: <span id="loggedInUser"></span>
+            <img src="https://cdn.discordapp.com/attachments/1175494981524394014/1250866806252507166/Legendary_GAMES-removebg-preview.png" alt="Logo">
+        </div>
+    </div>
+
+    <div class="games-section" id="gamesSection">
+        <iframe id="gameIframe" src="https://abinbins.github.io/a4/crazy-cars" allowtransparency="true" width="80%" height="550" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <div class="game-info">
+            <span>poor poor-bunny</span>
+            <div class="like-dislike">
+                <input type="text" id="likeComment" placeholder="O que você gostou?" maxlength="100">
+                <button id="likeButton" onclick="likeGame()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126473.png" alt="Like">
+                </button>
+                <input type="text" id="dislikeComment" placeholder="O que você não gostou?" maxlength="100">
+                <button id="dislikeButton" onclick="dislikeGame()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126504.png" alt="Dislike">
+                </button>
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png" alt="Favorite" onclick="favoriteGame()">
+                <button class="report-button" onclick="reportGame()">Report</button>
+                <button class="fullscreen-button" onclick="toggleFullScreen()">
+                    <img src="https://cdn.icon-icons.com/icons2/1863/PNG/512/fullscreen-exit_119084.png" alt="Fullscreen">
+                </button>
+            </div>
+        </div>
+        <p>Explore a jornada incrível neste emocionante jogo do Scratch!</p>
+        <button onclick="window.location.href='index.html'" class="play-button">Center/home</button>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        var username = localStorage.getItem('username');
+
+        if (isLoggedIn && username) {
+            document.getElementById('loggedInUser').textContent = username;
+        } else {
+            document.getElementById('loggedInUser').textContent = 'Você não está logado.';
+        }
+
+        function saveProgress(progress) {
+            if (isLoggedIn && username) {
+                localStorage.setItem('progress_' + username, JSON.stringify(progress));
+            }
+        }
+
+        function loadProgress() {
+            if (isLoggedIn && username) {
+                return JSON.parse(localStorage.getItem('progress_' + username));
+            }
+            return null;
+        }
+
+        var gameIframe = document.getElementById('gameIframe');
+        var gameProgress = loadProgress();
+
+        gameIframe.onload = function() {
+            if (gameProgress) {
+                gameIframe.contentWindow.postMessage({ action: 'loadProgress', data: gameProgress }, '*');
+            }
+
+            window.addEventListener('message', function(event) {
+                if (event.origin === 'https://g.vseigru.net') {
+                    if (event.data.action === 'saveProgress') {
+                        saveProgress(event.data.data);
+                    }
+                }
+            });
+        }
+
+        function showNotification(message, className) {
+            var notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = 'notification ' + className;
+            notification.style.display = 'block';
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function likeGame() {
+            var likeComment = document.getElementById('likeComment').value;
+            document.getElementById('likeButton').disabled = true;
+            document.getElementById('dislikeButton').disabled = true;
+            showNotification('Você gostou deste jogo. ' + likeComment, 'like-notification');
+        }
+
+        function dislikeGame() {
+            var dislikeComment = document.getElementById('dislikeComment').value;
+            document.getElementById('likeButton').disabled = true;
+            document.getElementById('dislikeButton').disabled = true;
+            showNotification('Você não gostou deste jogo. ' + dislikeComment, 'dislike-notification');
+        }
+
+        function favoriteGame() {
+            showNotification('Jogo adicionado aos favoritos.', '');
+        }
+
+        function toggleFullScreen() {
+            var iframe = document.getElementById('gameIframe');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+
+        function reportGame() {
+            showNotification('Jogo reportado.', '');
+        }
+    </script>
+</body>
+</html>
+
