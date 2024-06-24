@@ -9,7 +9,7 @@
   <style>
     /* Estilo para o fundo personalizado */
     body {
-      background-image: url('https://cdn.discordapp.com/attachments/1188974807350509640/1250926397220720660/360_F_417440234_w6uhv93WE60EYsYy.png?ex=666cb77e&is=666b65fe&hm=bb6bb5706cb03f76e7e301050b23b4c5256506ae800836036710968a76b8aaaf&');
+      background-color: black; /* Alterado para cor preta */
       background-size: cover;
       background-position: center;
       font-family: 'Inter', sans-serif; /* Define a fonte padrão para todo o documento */
@@ -73,14 +73,14 @@
             <img src="https://cdn.discordapp.com/attachments/1175494981524394014/1250866806252507166/Legendary_GAMES-removebg-preview.png?ex=666c7ffe&is=666b2e7e&hm=3cf382c0a5e030bfc5f7bf5a6a9c6127bb3ece22fb995a73b719c15195bb38d4&" alt="Logo">
         </div>
     </header>
-<body>
-  <div class="main-container">
-    <!-- Botões com classes corrigidas e adição de eventos onclick -->
-    <button class="frame discovery-button" onclick="navigateTo('game-list.html')">Games</button>
-    <input type="text" class="label-search" placeholder="Search" onkeyup="showSuggestions(this.value)" />
-  </div>
-  <div class="suggestions"></div>
 
-  <script src="home.js"></script>
+    <div class="main-container">
+      <!-- Botões com classes corrigidas e adição de eventos onclick -->
+      <button class="frame discovery-button" onclick="navigateTo('game-list.html')">Games</button>
+      <input type="text" class="label-search" placeholder="Search" onkeyup="showSuggestions(this.value)" />
+    </div>
+    <div class="suggestions"></div>
+
+    <script src="home.js"></script>
 </body>
 </html>

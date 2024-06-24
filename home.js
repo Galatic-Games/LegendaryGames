@@ -1,11 +1,12 @@
 const suggestions = [
-  { name: "Crazy Cars", image: "path/to/crazy-cars.jpg", url: "crazy-cars.html" },
+  { name: "Crazy Cars", image: "path/to/crazy-cars.jpg", url: "Crazy-Cars.html" },
   { name: "Drive Mad", image: "path/to/drive-mad.jpg", url: "drive-mad.html" },
   { name: "Animal Arena", image: "path/to/animal-arena.jpg", url: "animal-arena.html" },
   { name: "Poor Buny", image: "path/to/poor-buny.jpg", url: "poor-buny.html" },
   { name: "MOTO X3M", image: "path/to/moto-x3m.jpg", url: "moto-x3m.html" },
   { name: "Idle", image: "path/to/fancade.jpg", url: "Idle.html" },
   { name: "Bumper", image: "path/to/fancade.jpg", url: "bumper.html" },
+  { name: "Soccer Legends", image: "path/to/fancade.jpg", url: "soccer.html" },
   { name: "Soccer Legends", image: "path/to/fancade.jpg", url: "soccer.html" },
   { name: "Eugene", image: "path/to/eugene.jpg", url: "eugene.html" }
 ];
