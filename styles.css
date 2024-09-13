@@ -1,0 +1,199 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+}
+
+/* Navbar */
+.navbar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 20px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+/* Conteúdo */
+.content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 20px;
+    text-align: center;
+}
+
+.games-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--games-section-bg);
+    margin: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 80vh;
+    scrollbar-color: var(--primary-color) var(--background-color);
+    scrollbar-width: thin;
+}
+/* Contêiner do Jogo */
+#game-container {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Iframe em tela cheia */
+#game-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Alinhar nome, descrição e botão de fullscreen na mesma linha */
+.game-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.game-info {
+    text-align: left;
+}
+
+.game-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Botão de fullscreen alinhado à direita */
+.controls {
+    text-align: right;
+}
+
+#fullscreen-btn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#fullscreen-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Botão de voltar */
+#back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-btn:hover {
+    background-color: #555;
+}
+
+/* Seção de recomendações */
+#recommendations {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#recommendations h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.recommended-game {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.recommended-game img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Nome do jogo oculto inicialmente */
+.recommended-game .game-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse na imagem */
+.recommended-game:hover img {
+    transform: scale(1.1);
+}
+
+.recommended-game:hover .game-title {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Iframe em fullscreen */
+:fullscreen iframe {
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,86 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="home.css" />
-  <style>
-    /* Estilo para o fundo personalizado */
-    body {
-      background-color: black; /* Alterado para cor preta */
-      background-size: cover;
-      background-position: center;
-      font-family: 'Inter', sans-serif; /* Define a fonte padrão para todo o documento */
-      margin: 0; /* Remove margens padrão do corpo */
-      padding: 0; /* Remove preenchimento padrão do corpo */
-    }
-    .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--navbar-bg);
-            padding: 10px 20px;
-            border-radius: 15px;
-            margin: 10px;
-        }
-
-        .navbar a, .navbar button {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            background-color: var(--primary-color);
-            border: none;
-            cursor: pointer;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .navbar a:hover, .navbar button:hover {
-            background-color: #262a2e; /* Tom mais escuro ao passar o mouse */
-        }
-
-        .navbar img {
-            max-height: 50px;
-        }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Legendary Games </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('isLoggedIn')) {
-                window.location.href = 'login.html';
-            } else {
-                var loggedInUser = localStorage.getItem('username');
-                document.getElementById('loggedInUser').textContent = loggedInUser;
-            }
-        });
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home/scratchs</a></li>
+            <li><a href="game-list.html">all games</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
 
-        function logout() {
-            localStorage.clear();
-            window.location.href = 'login.html';
-        }
-    </script>
+    <div class="content">
+        <header>
+            <h1>Jogos Divertidos</h1>
+            <input type="text" id="searchBar" placeholder="Pesquisar jogos...">
+        </header>
 
-    <header class="navbar">
-        <div>
-            <span style="color: white;">Logged in as: <strong id="loggedInUser"></strong></span>
-            <a href="#" onclick="logout()">Logout</a>
-            <img src="https://cdn.discordapp.com/attachments/1175494981524394014/1250866806252507166/Legendary_GAMES-removebg-preview.png?ex=666c7ffe&is=666b2e7e&hm=3cf382c0a5e030bfc5f7bf5a6a9c6127bb3ece22fb995a73b719c15195bb38d4&" alt="Logo">
-        </div>
-    </header>
+        <section id="game-list">
+            <div class="game" onclick="openGame('thechaosfactory.html')">
+                <p class="game-title">the chaos factory</p>
+                <img src="thechaosfactory.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('pong.html')">
+                <p class="game-title">pong</p>
+                <img src="pong.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('boliche.html')">
+                <p class="game-title">boliche</p>
+                <img src="boliche.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('cowboy.html')">
+                <p class="game-title">cow boy</p>
+                <img src="cowboy.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('arena.html')">                <p class="game-title">Arena</p>
 
-    <div class="main-container">
-      <!-- Botões com classes corrigidas e adição de eventos onclick -->
-      <button class="frame discovery-button" onclick="navigateTo('game-list.html')">Games</button>
-      <input type="text" class="label-search" placeholder="Search" onkeyup="showSuggestions(this.value)" />
+                <img src="arena.png" alt="Jogo 1">
+            </div>
+            <div class="game" onclick="openGame('tetris.html')">
+                <p class="game-title">Tetris</p>
+                <img src="tetris.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('rungun.html')">
+                <p class="game-title">Run Gun</p>
+                <img src="rungun.png" alt="Jogo 2">               
+            </div>
+
+            <!-- Mais jogos -->
+        </section>
     </div>
-    <div class="suggestions"></div>
 
-    <script src="home.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

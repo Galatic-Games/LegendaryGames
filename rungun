@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Gun - Legendary-games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game-list.html">all games</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div id="game-container">       
+ <iframe id="gameIframe" src="https://scratch.mit.edu/projects/951437131/embed allowtransparency="true" width="80%" height="550" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+            <div class="game-info-container">
+                <div class="game-info">
+                    <h1 class="game-title">Run gun</h1>
+                    <p class="description">Shot the enymes</p>
+                </div>
+                <div class="controls">
+                    <img id="fullscreen-btn" src="Fullscreen.png" alt="Tela cheia" onclick="goFullScreen()">
+                </div>
+            </div>
+        </div>
+
+        <button id="back-btn" onclick="goBack()">Voltar</button>
+
+        <section id="recommendations">
+            <h2>Jogos Recomendados</h2>
+            <div class="recommended-game" onclick="openGame('game2.html')">
+                <img src="game2.jpg" alt="Jogo 2">
+                <p>Jogo 2</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

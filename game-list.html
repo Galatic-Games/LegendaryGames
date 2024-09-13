@@ -114,21 +114,6 @@
 
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('isLoggedIn')) {
-                window.location.href = 'login.html';
-            } else {
-                var loggedInUser = localStorage.getItem('username');
-                document.getElementById('loggedInUser').textContent = loggedInUser;
-            }
-        });
-
-        function logout() {
-            localStorage.clear();
-            window.location.href = 'login.html';
-        }
-    </script>
 
     <header class="navbar">
         <nav>
@@ -143,78 +128,6 @@
     </header>
 
     <main class="games-section" id="gamesSection">
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/746417136_144x108.png" alt="Legendary Games Image">
-            <button onclick="window.location.href='indexx.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/437465406_144x108.png" alt="Legendary Games Image2">
-            <button onclick="window.location.href='game2.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/419503825_144x108.png" alt="Legendary Games Image3">
-            <button onclick="window.location.href='game3.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/951437131_144x108.png" alt="Legendary Games Image4">
-            <button onclick="window.location.href='game4.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/478784072_144x108.png" alt="Legendary Games Image5">
-            <button onclick="window.location.href='game5.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/550043399_144x108.png" alt="Legendary Games Image6">
-            <button onclick="window.location.href='game6.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/139025103_144x108.png" alt="Legendary Games Image7">
-            <button onclick="window.location.href='game7.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/664860239_144x108.png" alt="Legendary Games Image8">
-            <button onclick="window.location.href='game8.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/469540467_144x108.png" alt="Legendary Games Image9">
-            <button onclick="window.location.href='game9.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://cdn2.scratch.mit.edu/get_image/project/1030331572_144x108.png" alt="Legendary Games Image10">
-            <button onclick="window.location.href='game10.html'" class="play-button">Jogar</button>
-        </div>
-        <div class="game">
-            <img src="https://uploads.scratch.mit.edu/get_image/project/845706674_144x108.png" alt="LegendaryGames Image11">
-<button onclick="window.location.href='game11.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/829610226_144x108.png" alt="Legendary Games Image12">
-<button onclick="window.location.href='game12.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/1036713883_144x108.png" alt="Legendary Games Image13">
-<button onclick="window.location.href='game13.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/831231112_144x108.png" alt="Legendary Games Image14">
-<button onclick="window.location.href='game14.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/951376155_144x108.png" alt="Legendary Games Image15">
-<button onclick="window.location.href='game15.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/1023369815_144x108.png" alt="Legendary Games Image16">
-<button onclick="window.location.href='game16.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/550043399_144x108.png" alt="Legendary Games Image17">
-<button onclick="window.location.href='game17.html'" class="play-button">Jogar</button>
-</div>
-<div class="game">
-<img src="https://cdn2.scratch.mit.edu/get_image/project/139025103_144x108.png" alt="Legendary Games Image18">
-<button onclick="window.location.href='game18.html'" class="play-button">Jogar</button>
-</div>
 <div class="game">
 <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776379481428019/20240620_114154_0000.png?ex=667715be&is=6675c43e&hm=290fed4fa37b1ec1225d04adbebfe7e9998480248398a1717624d11100402c13&" alt="Soccer">
 <button onclick="window.location.href='soccer.html'" class="play-button">Jogar</button>
